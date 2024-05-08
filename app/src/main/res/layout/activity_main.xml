@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search here..."
+            app:iconifiedByDefault="false"/>
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Songs"
+            android:fontFamily="@font/pacificoregular"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Your existing GridView -->
+        <GridView
+            android:id="@+id/idGVcourses1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+
+        <TextView
+            android:id="@+id/headerText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacificoregular"
+            android:text="Top Band Songs"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the second header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <GridView
+            android:id="@+id/idGVcourses2"
+            android:layout_width="match_parent"
+
+            android:layout_height="400dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+        <TextView
+            android:id="@+id/headerText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacificoregular"
+            android:text="Indian  Artist"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the second header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+        <GridView
+            android:id="@+id/idGVcourses3"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+        <TextView
+            android:id="@+id/headerText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indian Band Song"
+            android:fontFamily="@font/pacificoregular"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the second header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+        <GridView
+            android:id="@+id/idGVcourses4"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+        <TextView
+            android:id="@+id/headerText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacificoregular"
+            android:text="Bangladeshi Song"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the second header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+        <GridView
+            android:id="@+id/idGVcourses5"
+            android:layout_width="match_parent"
+            android:layout_height="1100dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="6dp" />
+
+
+
+    </LinearLayout>
+</ScrollView>

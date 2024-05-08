@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#bebebe"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Folk Songs"
+            android:fontFamily="@font/pacificoregular"
+
+            android:textColor="#0E0E0E"
+            android:textSize="39sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Line under the header -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Your existing GridView -->
+        <GridView
+            android:layout_marginTop="20dp"
+            android:id="@+id/idGVcourses1"
+            android:layout_width="match_parent"
+            android:layout_height="620dp"
+            android:numColumns="2"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="35dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
