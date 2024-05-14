@@ -11,9 +11,7 @@
         android:id="@+id/item_song_icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/beatles"
-
-        />
+        android:src="@drawable/beatles" />
 
     <TextView
         android:id="@+id/item_song_title"
@@ -26,5 +24,17 @@
         android:textColor="@android:color/black"
         android:gravity="center_vertical"
         android:textStyle="bold"/>
+    <ToggleButton
+        android:id="@+id/favorite_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Not Favorite"
+        android:textOn="Favorite"
+        android:checked="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"/>
+
 
 </LinearLayout>

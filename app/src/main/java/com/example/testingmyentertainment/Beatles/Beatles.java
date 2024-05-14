@@ -6,12 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ToggleButton;
 
 import com.example.testingmyentertainment.Musics.Mohiner_Ghoraguli;
 import com.example.testingmyentertainment.Musics.MusicPlayer;
@@ -19,6 +22,7 @@ import com.example.testingmyentertainment.Musics.PlayerActivity;
 import com.example.testingmyentertainment.R;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class Beatles extends AppCompatActivity {
 
@@ -26,6 +30,9 @@ public class Beatles extends AppCompatActivity {
     private SearchView searchView;
     private ArrayAdapter<String> adapter;
     private MusicPlayer musicPlayer;
+    private HashSet<String> favoriteSongs = new HashSet<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,16 +71,53 @@ public class Beatles extends AppCompatActivity {
 
         listView = findViewById(R.id.listView);
         searchView = findViewById(R.id.search_view);
-        adapter = new ArrayAdapter<String>(this, R.layout.list_item_songbeatles, R.id.item_song_title, songNames) {
+
+
+        Button btnShowFavorites = findViewById(R.id.btnShowFavorites);
+        btnShowFavorites.setOnClickListener(v -> {
+            Intent intent = new Intent(Beatles.this, FavoriteSongsActivity.class);
+            intent.putExtra("songNames", songNames); // pass array of song names
+            intent.putExtra("songUrls", songUrls); // pass array of song URLs
+            startActivity(intent);
+        });
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item_songbeatles, R.id.item_song_title, songNames) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
-                // Additional customization can be done here, if needed
+                ToggleButton toggleButton = view.findViewById(R.id.favorite_toggle);
+                String song = getItem(position);
+                boolean isFavorite = favoriteSongs.contains(song);
+
+                // Temporarily remove the listener
+                toggleButton.setOnCheckedChangeListener(null);
+
+                toggleButton.setChecked(isFavorite);
+                toggleButton.setText(isFavorite ? "Favorite" : "Not Favorite");
+                toggleButton.setTextOn("Favorite");
+                toggleButton.setTextOff("Not Favorite");
+
+                // Re-apply the listener
+                toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (isChecked) {
+                        favoriteSongs.add(song);
+                    } else {
+                        favoriteSongs.remove(song);
+                    }
+
+                    // Save the favorites status to SharedPreferences
+                    SharedPreferences prefs = getContext().getSharedPreferences("Favorites", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putStringSet("FavoriteSongs", favoriteSongs);
+                    editor.apply();
+                });
+
                 return view;
             }
         };
         listView.setAdapter(adapter);
+
 
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

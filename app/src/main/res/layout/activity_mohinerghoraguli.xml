@@ -10,17 +10,43 @@
         android:layout_height="wrap_content"
         android:queryHint="Search Names" />
 
+    <TextView
+        android:id="@+id/item_song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- Favorite ToggleButton -->
+
+
+
+    <Button
+        android:id="@+id/btnShowFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Favorites"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_view"
+        android:layout_below="@id/btnShowFavorites"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:padding="8dp"
         android:scrollbars="vertical"
         android:background="@android:color/white"
         android:listSelector="@android:color/holo_blue_light"/>
+
 
 
 
