@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/music">
+    <TextView
+        android:id="@+id/tvFavoriteSongsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Favorite Songs"
+        android:fontFamily="@font/pacificoregular"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
 
     <ListView
+        android:layout_below="@+id/tvFavoriteSongsTitle"
+
+
+
         android:id="@+id/favoritesListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:background="@android:color/white"
+        android:listSelector="@android:color/holo_blue_light"/>
 
 </RelativeLayout>

@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search Names" />
+        android:queryHint="Search Names"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/item_song_title"
@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Show Favorites"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"/>
 
     <ListView
@@ -43,9 +44,15 @@
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:padding="8dp"
+
+
+
         android:scrollbars="vertical"
         android:background="@android:color/white"
-        android:listSelector="@android:color/holo_blue_light"/>
+        android:listSelector="@android:color/holo_blue_light"
+
+
+        />
 
 
 

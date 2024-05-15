@@ -3,7 +3,7 @@ package com.example.testingmyentertainment.Beatles;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
+
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,6 +23,7 @@ import com.example.testingmyentertainment.R;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import androidx.appcompat.widget.SearchView;
 
 public class Beatles extends AppCompatActivity {
 
@@ -70,7 +71,7 @@ public class Beatles extends AppCompatActivity {
         musicPlayer = new MusicPlayer(songNames, songUrls);
 
         listView = findViewById(R.id.listView);
-        searchView = findViewById(R.id.search_view);
+
 
 
         Button btnShowFavorites = findViewById(R.id.btnShowFavorites);
@@ -94,9 +95,6 @@ public class Beatles extends AppCompatActivity {
                 toggleButton.setOnCheckedChangeListener(null);
 
                 toggleButton.setChecked(isFavorite);
-                toggleButton.setText(isFavorite ? "Favorite" : "Not Favorite");
-                toggleButton.setTextOn("Favorite");
-                toggleButton.setTextOff("Not Favorite");
 
                 // Re-apply the listener
                 toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -118,6 +116,8 @@ public class Beatles extends AppCompatActivity {
         };
         listView.setAdapter(adapter);
 
+        searchView = findViewById(R.id.search_view);
+
 
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -132,6 +132,7 @@ public class Beatles extends AppCompatActivity {
                 return true;
             }
         });
+
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             String selectedItem = adapter.getItem(position); // Get the item from the adapter, not directly from array
