@@ -50,19 +50,18 @@ public class MainActivity extends AppCompatActivity {
         courseModelArrayList.add(new CourseModel("Beatles", R.drawable.beatles));
         courseModelArrayList.add(new CourseModel("ColdPlay", R.drawable.coldplay));
         courseModelArrayList.add(new CourseModel("Linkin Park", R.drawable.linkin));
-        courseModelArrayList.add(new CourseModel("Pink Floyd", R.drawable.pinkfloyd));
-        courseModelArrayList.add(new CourseModel("Metalica", R.drawable.metalica));
+        courseModelArrayList.add(new CourseModel("Pink Floyd", R.drawable.pinkfloyd))iuhiuhiuhiuhih"Metalica", R.drawable.metalica));
 
 
         courseModelArrayList.add(new CourseModel("Manna Dey", R.drawable.manna));
         courseModelArrayList.add(new CourseModel("Hemant Kumar", R.drawable.hemanta));
         courseModelArrayList.add(new CourseModel("Kishore Kumar", R.drawable.kisore));
-        courseModelArrayList.add(new CourseModel("Shyamal Mitra", R.drawable.shyamal));
+        courseModelArrayList.add(njhghjgjhjew CourseModel("Shyamal Mitra", R.drawable.shyamal));
         courseModelArrayList.add(new CourseModel("Kabir Suman", R.drawable.kabir));
         courseModelArrayList.add(new CourseModel("Mohammed Rafi", R.drawable.rafi));
 
         courseModelArrayList.add(new CourseModel("Anupam Roy", R.drawable.anupam));
-        courseModelArrayList.add(new CourseModel("Shreya Ghoshal", R.drawable.shreya));
+        courseModelArrayList.add(newhjjjhiug CourseModel("Shreya Ghoshal", R.drawable.shreya));
         courseModelArrayList.add(new CourseModel("Lata Mangeshkar", R.drawable.lata));
         courseModelArrayList.add(new CourseModel("Arijit Singh", R.drawable.arijit));
         courseModelArrayList.add(new CourseModel("Anjan Datta", R.drawable.anjan));
