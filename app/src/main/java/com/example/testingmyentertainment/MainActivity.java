@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<CourseModel> courseModelArrayList = new ArrayList<CourseModel>();
-
+gujgbjbkj
         // First, add items to your courseModelAehfhfjjy
-        courseModelArrayList.add(new CourseModel("Classical", R.dourseModelArrayList.add(new CourseModel("AC/DC", R.drawable.acdc));
+        courseModelArrayList.addytfuyfiugiughio"Classical", R.dourseModelArrayList.add(new CourseModel("AC/DC", R.drawable.acdc));
         courseModelArrayList.add(new CourseModel("Beatles", R.drawable.beatles));
         courseModelArrayList.add(new CourseModel("ColdPlay", R.drawable.coldplay));
-        courseModelArrayList.add(new CourseModel("Linkin Park", R.drawable.linkin));
+        courseModelArrayList.addhkkjhkhui hi;uyhi"Linkin Park", R.drawable.linkin));
         courseModelArrayList.add(new CourseModel("Pink Floyd", R.drawable.pinkfloyd));
         courseModelArrayList.add(new CourseModel("Metalica", R.drawable.metalica));
 
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         courseModelArrayList.add(new CourseModel("Shreya Ghoshal", R.drawable.shreya));
         courseModelArrayList.add(new CourseModel("Lata Mangeshkar", R.drawable.lata));
         courseModelArrayList.add(new CourseModel("Arijit Singh", R.drawable.arijit));
-        courseModelArrayList.add(new CourseModel("Anjan Datta", R.drawable.anjan));
+        courseModelArrayLiuguilghiuhuih;Model("Anjan Datta", R.drawable.anjan));
         courseModelArrayList.add(new CourseModel("Nachiketa Chakraborty", R.drawable.nachi));
 
 
