@@ -39,14 +39,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<CourseModel> courseModelArrayList = new ArrayList<CourseModel>();
 
         // First, add items to your courseModelAehfhfjjy
-        courseModelArrayList.add(new CourseModel("Classical", R.drawable.classical));
-        courseModelArrayList.add(new CourseModel("AlternativeRock", R.drawable.alternativerock));
-        courseModelArrayList.add(new CourseModel("Folk", R.drawable.folk));
-        courseModelArrayList.add(new CourseModel("Jazz", R.drawable.jazz));
-        courseModelArrayList.add(new CourseModel("Electrical", R.drawable.electrical));
-        courseModelArrayList.add(new CourseModel("Rock", R.drawable.rock));
-
-        courseModelArrayList.add(new CourseModel("AC/DC", R.drawable.acdc));
+        courseModelArrayList.add(new CourseModel("Classical", R.dourseModelArrayList.add(new CourseModel("AC/DC", R.drawable.acdc));
         courseModelArrayList.add(new CourseModel("Beatles", R.drawable.beatles));
         courseModelArrayList.add(new CourseModel("ColdPlay", R.drawable.coldplay));
         courseModelArrayList.add(new CourseModel("Linkin Park", R.drawable.linkin));
